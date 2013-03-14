@@ -36,7 +36,6 @@ gem 'moip', git: 'git://github.com/moiplabs/moip-ruby.git'
 gem 'draper'
 
 # Frontend stuff
-gem 'slim'
 gem 'slim-rails'
 gem 'jquery-rails'
 gem 'initjs'
@@ -92,6 +91,8 @@ gem 'thin'
 group :development do
   gem 'mailcatcher'
   gem 'foreman'
+  gem 'better_errors'
+  gem "binding_of_caller"
 end
 
 group :test, :development do
@@ -105,6 +106,7 @@ group :test do
   gem 'shoulda'
   gem 'factory_girl_rails'
   gem 'capybara',   '~> 2.0.2'
+  gem 'jasmine'
 end
 
 
@@ -114,6 +116,11 @@ group :assets do
   gem "compass-rails",      '~> 1.0.2'
   gem 'uglifier',           '~> 1.0.3'
   gem 'compass-960-plugin', '~> 0.10.4'
+
+  # Sync assets to Amazon S3 (AWS)
+  gem 'asset_sync',         '~> 0.5.4'
+
+
 end
 
 
